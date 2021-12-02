@@ -35,9 +35,7 @@ class Connection {
   handleMessage(value) {
     const message = {
       id: uuidv4(),
-      sender: value.user.sender || defaultUser,
-      recipient: value.user.recipient || defaultUser,
-      value: value[1].description,
+      value: value,
       time: Date.now(),
     };
 
